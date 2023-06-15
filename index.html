@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Payment Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Title</legend>
+            <label><input type="radio" name="title" value="Mx" checked> Mx</label>
+            <label><input type="radio" name="title" value="Mr"> Mr</label>
+            <label><input type="radio" name="title" value="Mrs"> Mrs</label>
+            <label><input type="radio" name="title" value="Ms"> Ms</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Information</legend>
+            <label for="card">Card Type:</label>
+            <select id="card" name="card" required>
+                <option value="">Select a card type</option>
+                <option value="visa">VISA</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="discover">Discover</option>
+                <option value="amex">American Express</option>
+            </select>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required pattern="[0-9]{13,16}">
+            <small>Enter a 13 to 16-digit card number</small>
+
+            <label for="expiration-date">Expiration Date:</label>
+            <input type="text" id="expiration-date" name="expiration-date" required pattern="(0[1-9]|1[0-2])\/\d{2}">
+            <small>Enter expiration date in MM/YY format</small>
+        </fieldset>
+
+        <button type="submit">Submit Payment</button>
+    </form>
+</body>
+
+</html>
+
+</body>
+
+</html>
